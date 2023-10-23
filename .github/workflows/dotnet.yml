@@ -28,7 +28,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
           # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to resume
-      run: sed -i 's/<base href="\/" \/>/<base href="\/resume\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/resume\/" \/>/g' resume/wwwroot/index.html
           # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
+      run: touch resume/wwwroot/.nojekyll
