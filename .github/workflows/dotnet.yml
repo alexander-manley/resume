@@ -31,4 +31,4 @@ jobs:
       run: sed -i 's/<base href="\/" \/>/<base href="\/resume\/" \/>/g' wwwroot/index.html
           # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
-      run: touch resume/wwwroot/.nojekyll
+      run: touch wwwroot/.nojekyll
