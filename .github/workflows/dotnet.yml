@@ -26,3 +26,6 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+          # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to resume
+      run: sed -i 's/<base href="\/" \/>/<base href="\/resume\/" \/>/g' release/wwwroot/index.html
